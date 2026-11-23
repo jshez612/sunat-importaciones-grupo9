@@ -1,0 +1,81 @@
+﻿n_campo,variable,tipo_dbf,descripcion_oficial_sunat,unidad,dominio,faltantes_o_vacios,pct_faltantes,tratamiento_aplicado
+1,CODI_ADUAN,"C(3,0)",CODIGO DE ADUANA,Código catálogo SUNAT,Catálogo oficial vigente,0,0.0,Validación y decodificación contra catálogos oficiales SUNAT
+2,ANO_PRESE,"C(2,0)",AÑO DE PRESENTACION DE LA DUI,Identificador / Atributo,"DBF tipo C(2,0)",0,0.0,Validación de formato y optimización de memoria
+3,NUME_CORRE,"C(6,0)",NUMERO DE LA DUI,Identificador / Atributo,"DBF tipo C(6,0)",0,0.0,Validación de formato y optimización de memoria
+4,FECH_INGSI,"N(8,0)",FECHA DE NUMERACION DE LA DUI,Fecha (YYYYMMDD),Fecha válida o 0 (sin registro),0,0.0,Parseo a datetime; 0 -> NaT; cálculo de DIAS_TRANSITO y DIAS_DESPACHO
+5,TIPO_DOCUM,"C(1,0)",TIPO DE DOCUMENTO DEL IMPORTADOR,Código catálogo SUNAT,Catálogo oficial vigente,0,0.0,Validación y decodificación contra catálogos oficiales SUNAT
+6,LIBR_TRIBU,"C(11,0)",NUMERO DE DOCUMENTO DEL IMPORTADOR,Identificador / Atributo,"DBF tipo C(11,0)",0,0.0,Validación de formato y optimización de memoria
+7,DNOMBRE,"C(40,0)",RAZON SOCIAL DEL IMPORTADOR,Identificador / Atributo,"DBF tipo C(40,0)",0,0.0,Validación de formato y optimización de memoria
+8,CODI_AGENT,"C(4,0)",CODIGO DE AGENTE DE ADUANA,Identificador / Atributo,"DBF tipo C(4,0)",0,0.0,Validación de formato y optimización de memoria
+9,FECH_LLEGA,"N(8,0)",FECHA DE LLEGADA DE LA NAVE,Fecha (YYYYMMDD),Fecha válida o 0 (sin registro),0,0.0,Parseo a datetime; 0 -> NaT; cálculo de DIAS_TRANSITO y DIAS_DESPACHO
+10,VIA_TRANSP,"N(1,0)",CODIGO DE VIA DE TRANSPORTE,Código catálogo SUNAT,Catálogo oficial vigente,0,0.0,Validación y decodificación contra catálogos oficiales SUNAT
+11,EMPR_TRANS,"C(4,0)",CODIGO DE EMPRESA DE TRANSPORTE,Identificador / Atributo,"DBF tipo C(4,0)",476268,15.095,Validación de formato y optimización de memoria
+12,CODI_ALMA,"C(4,0)",CODIGO DE ALMACEN,Identificador / Atributo,"DBF tipo C(4,0)",437230,13.858,Validación de formato y optimización de memoria
+13,CADU_MANIF,"C(3,0)",ADUANA DEL MANIFIESTO,Identificador / Atributo,"DBF tipo C(3,0)",0,0.0,Validación de formato y optimización de memoria
+14,FECH_MANIF,"C(4,0)",AÑO DE NUMERACION DE MANIFIESTO,Fecha (YYYYMMDD),Fecha válida o 0 (sin registro),0,0.0,Parseo a datetime; 0 -> NaT; cálculo de DIAS_TRANSITO y DIAS_DESPACHO
+15,NUME_MANIF,"N(6,0)",NUMERO DE MANIFIESTO,Identificador / Atributo,"DBF tipo N(6,0)",0,0.0,Validación de formato y optimización de memoria
+16,FECH_RECEP,"N(8,0)",FECHA DE RECEPCION DE LA DUI,Fecha (YYYYMMDD),Fecha válida o 0 (sin registro),0,0.0,Parseo a datetime; 0 -> NaT; cálculo de DIAS_TRANSITO y DIAS_DESPACHO
+17,FECH_CANCE,"N(8,0)",FECHA DE CANCELACION,Fecha (YYYYMMDD),Fecha válida o 0 (sin registro),0,0.0,Parseo a datetime; 0 -> NaT; cálculo de DIAS_TRANSITO y DIAS_DESPACHO
+18,TIPO_CANCE,"N(2,0)",TIPO DE CANCELACION,Identificador / Atributo,"DBF tipo N(2,0)",0,0.0,Validación de formato y optimización de memoria
+19,BANC_CANCE,"C(3,0)",CODIGO DE BANCO DE CANCELACION,Identificador / Atributo,"DBF tipo C(3,0)",2130531,67.525,Validación de formato y optimización de memoria
+20,CODI_ENFIN,"C(3,0)",CODIGO DE ENTIDAD FINANCIERA,Identificador / Atributo,"DBF tipo C(3,0)",1759688,55.772,Validación de formato y optimización de memoria
+21,DK,"C(1,0)",INDICADOR DE TELEDESPACHO,Identificador / Atributo,"DBF tipo C(1,0)",0,0.0,Validación de formato y optimización de memoria
+22,PAIS_ORIGE,"C(3,0)",CODIGO DEL PAIS DE ORIGEN,Código catálogo SUNAT,Catálogo oficial vigente,0,0.0,Validación y decodificación contra catálogos oficiales SUNAT
+23,PAIS_ADQUI,"C(3,0)",PAIS DE ADQUISICION,Código catálogo SUNAT,Catálogo oficial vigente,0,0.0,Validación y decodificación contra catálogos oficiales SUNAT
+24,PUER_EMBAR,"C(6,0)",CODIGO DEL PUERTO DE EMBARQUE,Código catálogo SUNAT,Catálogo oficial vigente,252,0.008,Validación y decodificación contra catálogos oficiales SUNAT
+25,FECH_EMBAR,"N(8,0)",FECHA DE EMBARQUE (campo presente en DBF 2026; añadido posteriormente al XLS histórico de 57 campos),Fecha (YYYYMMDD),Fecha válida o 0 (sin registro),0,0.0,Parseo a datetime; 0 -> NaT; cálculo de DIAS_TRANSITO y DIAS_DESPACHO
+26,NUME_SERIE,"C(4,0)",NUMERO DE SERIE,Identificador / Atributo,"DBF tipo C(4,0)",0,0.0,Validación de formato y optimización de memoria
+27,PART_NANDI,"N(10,0)",CODIGO DE LA PARTIDA NANDINA,Código NANDINA (10 dígitos),Subpartida arancelaria nacional,0,0.0,Relleno con ceros a 10 dígitos; extracción de CAPITULO_HS2 y SECCION_ARANCELARIA
+28,DESC_COMER,"C(90,0)",DESCRIPCION COMERCIAL,Texto libre (90 chars),Descripción comercial / técnica,0,0.0,Conservada en Base_Inicial; se extrae longitud/presencia y se omite de Base_Final por eficiencia
+29,DESC_MATCO,"C(90,0)",DESCRIPCION COMERCIAL,Texto libre (90 chars),Descripción comercial / técnica,109529,3.471,Conservada en Base_Inicial; se extrae longitud/presencia y se omite de Base_Final por eficiencia
+30,DESC_USOAP,"C(90,0)",DESCRIPCION COMERCIAL,Texto libre (90 chars),Descripción comercial / técnica,271829,8.615,Conservada en Base_Inicial; se extrae longitud/presencia y se omite de Base_Final por eficiencia
+31,DESC_FOPRE,"C(90,0)",DESCRIPCION COMERCIAL,Texto libre (90 chars),Descripción comercial / técnica,6105,0.193,Conservada en Base_Inicial; se extrae longitud/presencia y se omite de Base_Final por eficiencia
+32,DESC_OTROS,"C(90,0)",DESCRIPCION COMERCIAL,Texto libre (90 chars),Descripción comercial / técnica,610172,19.339,Conservada en Base_Inicial; se extrae longitud/presencia y se omite de Base_Final por eficiencia
+33,FOB_DOLPOL,"N(14,3)",VALOR FOB DE LA SERIE,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+34,FLE_DOLAR,"N(11,3)",VALOR DEL FLETE,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+35,SEG_DOLAR,"N(11,3)",VALOR DEL SEGURO,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+36,PESO_NETO,"N(14,3)",PESO NETO,Kilogramos (kg),> 0; PESO_BRUTO >= PESO_NETO,0,0.0,Filtro PESO_NETO > 0; corrección con bandera si PESO_BRUTO < PESO_NETO
+37,PESO_BRUTO,"N(14,3)",PESO BRUTO,Kilogramos (kg),> 0; PESO_BRUTO >= PESO_NETO,0,0.0,Filtro PESO_NETO > 0; corrección con bandera si PESO_BRUTO < PESO_NETO
+38,UNID_FIQTY,"N(12,3)",CANTIDAD IMPORTADA,Identificador / Atributo,"DBF tipo N(12,3)",0,0.0,Validación de formato y optimización de memoria
+39,UNID_FIDES,"C(3,0)",UNIDAD DE MEDIDA,Código catálogo SUNAT,Catálogo oficial vigente,0,0.0,Validación y decodificación contra catálogos oficiales SUNAT
+40,QUNICOM,"N(14,3)",CANTIDAD DE UNIDAD COMERCIAL,Identificador / Atributo,"DBF tipo N(14,3)",0,0.0,Validación de formato y optimización de memoria
+41,TUNICOM,"C(3,0)",TIPO DE UNIDAD COMERCIAL,Identificador / Atributo,"DBF tipo C(3,0)",0,0.0,Validación de formato y optimización de memoria
+42,SEST_MERCA,"C(5,0)",ESTADO DE LA MERCANCIA,Código catálogo SUNAT,Catálogo oficial vigente,0,0.0,Validación y decodificación contra catálogos oficiales SUNAT
+43,ADV_DOLAR,"N(11,2)",ADV DÓLAR  POR PARTIDA,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+44,IGV_DOLAR,"N(11,2)",IGV DÓLAR POR PARTIDA,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+45,ISC_DOLAR,"N(11,2)",ISC DÓLAR POR PARTIDA,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+46,IPM_DOLAR,"N(11,2)",IPM DÓLAR POR PARTIDA,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+47,DES_DOLAR,"N(11,2)",DESRECHO ESPECIFICO POR PARTIDA,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+48,IPA_DOLAR,"N(11,2)",IMP DE PROMOCION ADICIONAL POR PARTIDA,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+49,SAD_DOLAR,"N(11,2)",SOBRETASA ADICIONAL POR PARTIDA,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+50,DER_ADUM,"N(11,2)",DERECHO ANTIDUMPING POR PARTIDA,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+51,COMM,"N(11,2)",COMMODITIES POR PARTIDA,USD,>= 0 (FOB > 0 en base limpia),0,0.0,Validación de no negatividad; FOB > 0; base para CIF y tasas
+52,FMOD,"N(8,0)",FECHA DE MODIFICACION,Fecha (YYYYMMDD),Fecha válida o 0 (sin registro),0,0.0,Parseo a datetime; 0 -> NaT; cálculo de DIAS_TRANSITO y DIAS_DESPACHO
+53,CANT_BULTO,"N(14,3)",CANTIDAD DE BULTOS,Identificador / Atributo,"DBF tipo N(14,3)",0,0.0,Validación de formato y optimización de memoria
+54,CLASE,"C(3,0)",CLASE DE BULTO,Identificador / Atributo,"DBF tipo C(3,0)",0,0.0,Validación de formato y optimización de memoria
+55,TRAT_PREFE,"N(3,0)",TRATO PREFERENCIAL,Identificador / Atributo,"DBF tipo N(3,0)",0,0.0,Validación de formato y optimización de memoria
+56,TIPO_TRAT,"N(1,0)",TIPO DE TRATAMIENTO,Identificador / Atributo,"DBF tipo N(1,0)",0,0.0,Validación de formato y optimización de memoria
+57,CODI_LIBER,"N(4,0)",CODIGO LIBERATORIO,Código catálogo SUNAT,Catálogo oficial vigente,0,0.0,Validación y decodificación contra catálogos oficiales SUNAT
+58,IMPR_RELIQ,"C(1,0)",INDICADOR DE RELIQUIDACION,Identificador / Atributo,"DBF tipo C(1,0)",3093019,98.03,Validación de formato y optimización de memoria
+59,CIF_DOLAR,float32,Valor CIF = FOB + Flete + Seguro,USD,> 0,0,0.0,Objetivo/contable (excluida de X por leakage)
+60,SOBRECOSTO_LOG_USD,float32,Costo logístico absoluto = Flete + Seguro,USD,>= 0,0,0.0,Excluida de X por leakage
+61,TASA_LOGISTICA_PCT,float32,Sobrecosto logístico ad valorem = 100*(Flete+Seguro)/FOB,% FOB,>= 0,0,0.0,Variable económica objetivo
+62,TASA_LOGISTICA_WINS,float32,Tasa logística winsorizada al percentil 99.5,% FOB,"[0, P99.5]",0,0.0,Base para transformación log1p
+63,LOG_TASA_LOGISTICA,float32,log1p(TASA_LOGISTICA_WINS),log(%),>= 0,0,0.0,Target de Regresión Supervisada
+64,ALTO_SOBRECOSTO,int8,Indicador binario: 1 si TASA_LOGISTICA_PCT >= 20%,Binaria,"{0, 1}",0,0.0,Target de Clasificación Desbalanceada
+65,TRIBUTOS_TOTAL_USD,float32,Suma total de tributos aduaneros liquidados,USD,>= 0,0,0.0,Excluida de X por leakage (depende de CIF)
+66,TASA_ADV_EFECTIVA_PCT,float32,Arancel Ad Valorem efectivo = 100*ADV/CIF,% CIF,"[0, 100]",0,0.0,Análisis fiscal y clustering
+67,CARGA_TRIBUTARIA_PCT,float32,Carga tributaria total = 100*Tributos/CIF,% CIF,"[0, 150]",0,0.0,Análisis fiscal y clustering
+68,VALOR_UNITARIO_KG,float32,Densidad de valor = FOB / PESO_NETO (Alchian-Allen),USD/kg,> 0,0,0.0,Predictor clave ex-ante
+69,LOG_VALOR_UNIT_KG,float32,log1p(VALOR_UNITARIO_KG),log(USD/kg),>= 0,0,0.0,Predictor supervisado y variable de clustering
+70,LOG_FOB,float32,log1p(FOB_DOLPOL),log(USD),> 0,0,0.0,Predictor de escala económica
+71,LOG_PESO_NETO,float32,log1p(PESO_NETO),log(kg),> 0,0,0.0,Predictor de masa física
+72,RATIO_EMBALAJE_LOG,float32,log1p((PESO_BRUTO_CORR - PESO_NETO)/PESO_NETO),log(ratio),>= 0,0,0.0,Predictor de intensidad de embalaje
+73,DIAS_TRANSITO_VAL,float32,Días entre fecha de embarque y llegada (rango 0–180),Días,"[0, 180]",0,0.0,Proxy de distancia y congestión logística
+74,DIAS_DESPACHO_VAL,float32,Días entre llegada de nave y numeración DAM (-60 a 120),Días,"[-60, 120]",0,0.0,Indicador de despacho anticipado vs diferido
+75,SERIES_EN_DAM,int32,Cantidad de series consolidadas en la misma DAM,Conteo,>= 1,0,0.0,Proxy de consolidación de carga
+76,ORIGEN_EQ_ADQUI,int8,1 si PAIS_ORIGE == PAIS_ADQUI (compra directa),Binaria,"{0, 1}",0,0.0,Indicador de no triangulación comercial
+77,TIENE_TLC_PREF,int8,1 si TRAT_PREFE > 0 (acogido a acuerdo comercial),Binaria,"{0, 1}",0,0.0,Indicador de preferencia arancelaria TLC
+78,CAPITULO_HS2,string,Capítulo arancelario (2 primeros dígitos NANDINA),Código HS2,01–99,0,0.0,Clasificación sectorial
+79,SECCION_ARANCELARIA,category,21 Secciones oficiales del Sistema Armonizado,Categoría,I–XXI,0,0.0,Agregación económica sectorial
+80,REGION_ORIGEN,category,Macro-región geográfica del país de origen,Categoría,7 regiones,0,0.0,Agregación geográfica

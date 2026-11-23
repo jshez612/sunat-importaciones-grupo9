@@ -1,0 +1,1580 @@
+{
+  "meta": {
+    "proyecto": "Trabajo Final Integrador — Ciencia de Datos para Economistas (2026-2)",
+    "grupo": "Grupo 9",
+    "integrantes": [
+      "Integrante 1",
+      "Integrante 2",
+      "Integrante 3",
+      "Integrante 4"
+    ],
+    "docente": "Angel Agüero Correa",
+    "ejecutado_en_colab": true,
+    "fecha_ejecucion_utc": "2026-11-23 01:04:02 UTC",
+    "seed": 2026,
+    "versiones": {
+      "python": "3.13.18",
+      "numpy": "2.4.6",
+      "pandas": "2.2.3",
+      "pyarrow": "23.0.1",
+      "scikit_learn": "1.6.1",
+      "lightgbm": "4.6.0",
+      "scipy": "1.16.3",
+      "plotly": "5.24.1"
+    }
+  },
+  "auditoria_inicial": {
+    "registros_crudos": 3155169,
+    "columnas_crudas": 58,
+    "tamano_zip_mb": 185.31,
+    "tamano_dbf_mb": 2554.66,
+    "base_inicial_parquet_mb": 148.19,
+    "ram_analitico_mb": 1338.55,
+    "reglas": {
+      "total_registros_crudos": 3155169,
+      "duplicados_clave_primaria_excedentes": 0,
+      "fob_menor_o_igual_cero": 0,
+      "flete_negativo_o_nulo": 0,
+      "seguro_negativo_o_nulo": 0,
+      "peso_neto_menor_o_igual_cero": 0,
+      "peso_bruto_menor_peso_neto": 0,
+      "tributos_negativos_alguno": 0,
+      "fech_embar_cero_o_invalida": 287,
+      "fech_cance_cero_sin_pago_inmediato": 2129929,
+      "pais_origen_fuera_catalogo": 0,
+      "aduana_fuera_catalogo": 57768,
+      "via_transp_fuera_catalogo": 67
+    },
+    "resumen_semanal": [
+      {
+        "semana": "S01",
+        "archivo": "ma07130926.zip",
+        "fecha_inicio": "2026-09-07",
+        "fecha_fin": "2026-09-13",
+        "registros_crudos": 298338,
+        "borrados_dbf": 0,
+        "fob_usd": 1493570307.46,
+        "cif_usd": 1605106318.86,
+        "zip_mb": 17.25,
+        "dbf_mb": 241.56
+      },
+      {
+        "semana": "S02",
+        "archivo": "ma14200926.zip",
+        "fecha_inicio": "2026-09-14",
+        "fecha_fin": "2026-09-20",
+        "registros_crudos": 309625,
+        "borrados_dbf": 0,
+        "fob_usd": 1514663529.15,
+        "cif_usd": 1629803778.61,
+        "zip_mb": 18.34,
+        "dbf_mb": 250.7
+      },
+      {
+        "semana": "S03",
+        "archivo": "ma21270926.zip",
+        "fecha_inicio": "2026-09-21",
+        "fecha_fin": "2026-09-27",
+        "registros_crudos": 296246,
+        "borrados_dbf": 0,
+        "fob_usd": 1391288231.98,
+        "cif_usd": 1494800937.39,
+        "zip_mb": 17.27,
+        "dbf_mb": 239.86
+      },
+      {
+        "semana": "S04",
+        "archivo": "ma28041026.zip",
+        "fecha_inicio": "2026-09-28",
+        "fecha_fin": "2026-10-04",
+        "registros_crudos": 315530,
+        "borrados_dbf": 0,
+        "fob_usd": 1301882975.22,
+        "cif_usd": 1416192149.92,
+        "zip_mb": 18.65,
+        "dbf_mb": 255.48
+      },
+      {
+        "semana": "S05",
+        "archivo": "ma05111026.zip",
+        "fecha_inicio": "2026-10-05",
+        "fecha_fin": "2026-10-11",
+        "registros_crudos": 292674,
+        "borrados_dbf": 0,
+        "fob_usd": 1582676735.64,
+        "cif_usd": 1714556859.7,
+        "zip_mb": 17.64,
+        "dbf_mb": 236.97
+      },
+      {
+        "semana": "S06",
+        "archivo": "ma12181026.zip",
+        "fecha_inicio": "2026-10-12",
+        "fecha_fin": "2026-10-18",
+        "registros_crudos": 341765,
+        "borrados_dbf": 0,
+        "fob_usd": 1427859906.31,
+        "cif_usd": 1557359218.73,
+        "zip_mb": 19.94,
+        "dbf_mb": 276.72
+      },
+      {
+        "semana": "S07",
+        "archivo": "ma19251026.zip",
+        "fecha_inicio": "2026-10-19",
+        "fecha_fin": "2026-10-25",
+        "registros_crudos": 336902,
+        "borrados_dbf": 0,
+        "fob_usd": 1456258988.26,
+        "cif_usd": 1581618787.49,
+        "zip_mb": 19.22,
+        "dbf_mb": 272.78
+      },
+      {
+        "semana": "S08",
+        "archivo": "ma26011126.zip",
+        "fecha_inicio": "2026-10-26",
+        "fecha_fin": "2026-11-01",
+        "registros_crudos": 337796,
+        "borrados_dbf": 0,
+        "fob_usd": 1459290614.75,
+        "cif_usd": 1591615061.52,
+        "zip_mb": 19.38,
+        "dbf_mb": 273.5
+      },
+      {
+        "semana": "S09",
+        "archivo": "ma02081126.zip",
+        "fecha_inicio": "2026-11-02",
+        "fecha_fin": "2026-11-08",
+        "registros_crudos": 310194,
+        "borrados_dbf": 0,
+        "fob_usd": 1626733733.65,
+        "cif_usd": 1768353574.02,
+        "zip_mb": 18.61,
+        "dbf_mb": 251.16
+      },
+      {
+        "semana": "S10",
+        "archivo": "ma09151126.zip",
+        "fecha_inicio": "2026-11-09",
+        "fecha_fin": "2026-11-15",
+        "registros_crudos": 316099,
+        "borrados_dbf": 0,
+        "fob_usd": 1365447411.98,
+        "cif_usd": 1482381753.23,
+        "zip_mb": 19.02,
+        "dbf_mb": 255.94
+      }
+    ]
+  },
+  "limpieza": {
+    "registros_finales": 3155169,
+    "pct_retenido": 100.0,
+    "peso_bruto_corregidos": 0,
+    "p99_tasa_logistica_pct": 87.259,
+    "p995_tasa_logistica_pct": 145.783,
+    "n_outliers_logisticos_p995": 15776,
+    "tabla_trazabilidad": [
+      {
+        "paso": "0. Base cruda consolidada (10 semanas)",
+        "filas_antes": 3155169,
+        "filas_despues": 3155169,
+        "excluidas": 0,
+        "pct_retenido_total": 100.0,
+        "justificacion": "Universo completo cargado desde GitHub"
+      },
+      {
+        "paso": "1. Deduplicación por clave DAM + Serie",
+        "filas_antes": 3155169,
+        "filas_despues": 3155169,
+        "excluidas": 0,
+        "pct_retenido_total": 100.0,
+        "justificacion": "Evitar doble conteo por rectificaciones entre semanas"
+      },
+      {
+        "paso": "2. Valor comercial válido (FOB_DOLPOL > 0)",
+        "filas_antes": 3155169,
+        "filas_despues": 3155169,
+        "excluidas": 0,
+        "pct_retenido_total": 100.0,
+        "justificacion": "Necesario para valoración económica y denominador ad valorem"
+      },
+      {
+        "paso": "3. Peso físico válido (PESO_NETO > 0)",
+        "filas_antes": 3155169,
+        "filas_despues": 3155169,
+        "excluidas": 0,
+        "pct_retenido_total": 100.0,
+        "justificacion": "Necesario para densidad de valor FOB/kg (Alchian-Allen)"
+      },
+      {
+        "paso": "4. No negatividad de flete, seguro y tributos",
+        "filas_antes": 3155169,
+        "filas_despues": 3155169,
+        "excluidas": 0,
+        "pct_retenido_total": 100.0,
+        "justificacion": "Consistencia contable y tributaria aduanera"
+      },
+      {
+        "paso": "5. Consistencia PESO_BRUTO >= PESO_NETO (corrección con bandera)",
+        "filas_antes": 3155169,
+        "filas_despues": 3155169,
+        "excluidas": 0,
+        "pct_retenido_total": 100.0,
+        "justificacion": "0 registros corregidos con FLAG_PESO_CORR=1 sin pérdida muestral"
+      }
+    ]
+  },
+  "eda": {
+    "n_dams_unicas": 206668,
+    "n_importadores_unicos": 21924,
+    "n_partidas_unicas": 5664,
+    "n_paises_unicos": 178,
+    "total_fob_usd": 14619672434.4,
+    "total_flete_usd": 1179080902.1,
+    "total_seguro_usd": 43035102.97,
+    "total_cif_usd": 15841788457.56,
+    "total_tributos_usd": 2943640421.22,
+    "total_adv_usd": 111921104.12,
+    "total_igv_usd": 2377008127.48,
+    "total_ipm_usd": 383251040.22,
+    "total_isc_usd": 68587374.34,
+    "tasa_logistica_agregada_pct": 8.359,
+    "tasa_logistica_mediana_pct": 5.59,
+    "tasa_logistica_media_wins_pct": 10.527,
+    "tasa_logistica_p75_pct": 12.035,
+    "tasa_logistica_p90_pct": 22.672,
+    "h1_spearman_rho": -0.4659,
+    "h1_spearman_pval": 0.0,
+    "h2_kruskal_H": 2075.64,
+    "h2_kruskal_pval": 0.0,
+    "h4_adv_con_tlc_media": 2.616,
+    "h4_adv_sin_tlc_media": 2.4537,
+    "h4_pct_series_tlc": 0.17,
+    "top10_paises": [
+      {
+        "PAIS_ORIGE_STR": "CN",
+        "PAIS_ISO3": "CHN",
+        "PAIS_ORIGE_DESC": "CHINA",
+        "REGION_ORIGEN": "Asia",
+        "series": 1487327,
+        "fob_m": 4425.336533644073,
+        "cif_m": 4934.037072334913,
+        "trib_m": 963.7338580739666,
+        "tasa_log_med": 8.609745025634766,
+        "tasa_adv_media": 2.1736934185028076,
+        "pct_tlc": 0.07221007888648562,
+        "val_kg_med": 7.378964424133301,
+        "pct_fob": 30.269737940452632
+      },
+      {
+        "PAIS_ORIGE_STR": "US",
+        "PAIS_ISO3": "USA",
+        "PAIS_ORIGE_DESC": "UNITED STATES",
+        "REGION_ORIGEN": "Norteamérica",
+        "series": 235833,
+        "fob_m": 3146.8233374862307,
+        "cif_m": 3348.17030351397,
+        "trib_m": 584.1668463716277,
+        "tasa_log_med": 3.22794508934021,
+        "tasa_adv_media": 1.520192265510559,
+        "pct_tlc": 0.311237189027829,
+        "val_kg_med": 56.488956451416016,
+        "pct_fob": 21.52458170049535
+      },
+      {
+        "PAIS_ORIGE_STR": "BR",
+        "PAIS_ISO3": "BRA",
+        "PAIS_ORIGE_DESC": "BRAZIL",
+        "REGION_ORIGEN": "Sudamérica",
+        "series": 133295,
+        "fob_m": 915.1224807285636,
+        "cif_m": 969.1171249404151,
+        "trib_m": 176.5164527785305,
+        "tasa_log_med": 4.568734169006348,
+        "tasa_adv_media": 0.7409986257553101,
+        "pct_tlc": 0.03075884316741063,
+        "val_kg_med": 24.03022575378418,
+        "pct_fob": 6.259527939733966
+      },
+      {
+        "PAIS_ORIGE_STR": "AR",
+        "PAIS_ISO3": "ARG",
+        "PAIS_ORIGE_DESC": "ARGENTINA",
+        "REGION_ORIGEN": "Sudamérica",
+        "series": 27053,
+        "fob_m": 802.4259473576843,
+        "cif_m": 893.2162974971257,
+        "trib_m": 160.96910884220839,
+        "tasa_log_med": 5.62441873550415,
+        "tasa_adv_media": 0.5965912342071533,
+        "pct_tlc": 0.1293756699811481,
+        "val_kg_med": 16.515470504760742,
+        "pct_fob": 5.488672546929537
+      },
+      {
+        "PAIS_ORIGE_STR": "CA",
+        "PAIS_ISO3": "CAN",
+        "PAIS_ORIGE_DESC": "CANADA",
+        "REGION_ORIGEN": "Norteamérica",
+        "series": 10453,
+        "fob_m": 453.3876336775189,
+        "cif_m": 481.14891378584804,
+        "trib_m": 85.34834746977576,
+        "tasa_log_med": 3.772451400756836,
+        "tasa_adv_media": 1.6846392154693604,
+        "pct_tlc": 0.6696642112312255,
+        "val_kg_med": 46.541664123535156,
+        "pct_fob": 3.101216088883386
+      },
+      {
+        "PAIS_ORIGE_STR": "CL",
+        "PAIS_ISO3": "CHL",
+        "PAIS_ORIGE_DESC": "CHILE",
+        "REGION_ORIGEN": "Sudamérica",
+        "series": 25038,
+        "fob_m": 348.3085087818087,
+        "cif_m": 368.0939110673578,
+        "trib_m": 62.630787568023,
+        "tasa_log_med": 3.4276483058929443,
+        "tasa_adv_media": 1.452290654182434,
+        "pct_tlc": 0.4393322150331496,
+        "val_kg_med": 8.520358085632324,
+        "pct_fob": 2.3824645206300996
+      },
+      {
+        "PAIS_ORIGE_STR": "IN",
+        "PAIS_ISO3": "IND",
+        "PAIS_ORIGE_DESC": "INDIA",
+        "REGION_ORIGEN": "Asia",
+        "series": 143195,
+        "fob_m": 324.7254665535102,
+        "cif_m": 366.06511316042,
+        "trib_m": 85.65633464308266,
+        "tasa_log_med": 6.289949893951416,
+        "tasa_adv_media": 3.8210341930389404,
+        "pct_tlc": 0.015363664932434792,
+        "val_kg_med": 11.679738998413086,
+        "pct_fob": 2.2211541880345815
+      },
+      {
+        "PAIS_ORIGE_STR": "MX",
+        "PAIS_ISO3": "MEX",
+        "PAIS_ORIGE_DESC": "MEXICO",
+        "REGION_ORIGEN": "Norteamérica",
+        "series": 64915,
+        "fob_m": 322.43284671849096,
+        "cif_m": 335.4577964297952,
+        "trib_m": 62.769934806038975,
+        "tasa_log_med": 2.9834394454956055,
+        "tasa_adv_media": 0.9125203490257263,
+        "pct_tlc": 0.06315951629053378,
+        "val_kg_med": 27.035362243652344,
+        "pct_fob": 2.2054724424598624
+      },
+      {
+        "PAIS_ORIGE_STR": "EC",
+        "PAIS_ISO3": "ECU",
+        "PAIS_ORIGE_DESC": "ECUADOR",
+        "REGION_ORIGEN": "Sudamérica",
+        "series": 10289,
+        "fob_m": 306.87734265970437,
+        "cif_m": 317.2539731821538,
+        "trib_m": 53.42338390893264,
+        "tasa_log_med": 2.5657894611358643,
+        "tasa_adv_media": 0.3156525194644928,
+        "pct_tlc": 0.009719117504130625,
+        "val_kg_med": 2.0428361892700195,
+        "pct_fob": 2.0990712619369014
+      },
+      {
+        "PAIS_ORIGE_STR": "JP",
+        "PAIS_ISO3": "JPN",
+        "PAIS_ORIGE_DESC": "JAPAN",
+        "REGION_ORIGEN": "Asia",
+        "series": 99448,
+        "fob_m": 304.00583426059933,
+        "cif_m": 328.7843448017901,
+        "trib_m": 66.14228983308877,
+        "tasa_log_med": 2.340169906616211,
+        "tasa_adv_media": 1.3860087394714355,
+        "pct_tlc": 0.02413321534872496,
+        "val_kg_med": 36.81486511230469,
+        "pct_fob": 2.0794298615430775
+      }
+    ],
+    "top8_aduanas": [
+      {
+        "CODI_ADUAN": "118",
+        "ADUANA_DESC": "MARITIMA DEL CALLAO",
+        "series": 2009834,
+        "fob_m": 10010.604578582508,
+        "cif_m": 10850.920653150137,
+        "tasa_log_med": 5.368041038513184,
+        "pct_fob": 68.47352171195561
+      },
+      {
+        "CODI_ADUAN": "235",
+        "ADUANA_DESC": "AEREA Y POSTAL EX-IAAC",
+        "series": 976808,
+        "fob_m": 1358.9158216281153,
+        "cif_m": 1451.7392182875224,
+        "tasa_log_med": 5.879294395446777,
+        "pct_fob": 9.29511812064287
+      },
+      {
+        "CODI_ADUAN": "145",
+        "ADUANA_DESC": "MOLLENDO - MATARANI",
+        "series": 2775,
+        "fob_m": 684.4597521501723,
+        "cif_m": 742.2972187546045,
+        "tasa_log_med": 8.093276023864746,
+        "pct_fob": 4.68177214791666
+      },
+      {
+        "CODI_ADUAN": "370",
+        "ADUANA_DESC": "OTRA ADUANA",
+        "series": 57768,
+        "fob_m": 493.92340395063593,
+        "cif_m": 562.610291437969,
+        "tasa_log_med": 11.56580924987793,
+        "pct_fob": 3.378484751741724
+      },
+      {
+        "CODI_ADUAN": "127",
+        "ADUANA_DESC": "PISCO",
+        "series": 644,
+        "fob_m": 385.5125016389214,
+        "cif_m": 423.94932201088443,
+        "tasa_log_med": 5.285893440246582,
+        "pct_fob": 2.636943497666437
+      },
+      {
+        "CODI_ADUAN": "046",
+        "ADUANA_DESC": "PAITA",
+        "series": 9104,
+        "fob_m": 336.00914596839675,
+        "cif_m": 369.52216325595117,
+        "tasa_log_med": 9.0,
+        "pct_fob": 2.2983356670692263
+      },
+      {
+        "CODI_ADUAN": "172",
+        "ADUANA_DESC": "TACNA",
+        "series": 63286,
+        "fob_m": 317.44650385068985,
+        "cif_m": 335.0026577513778,
+        "tasa_log_med": 4.549529075622559,
+        "pct_fob": 2.171365365915043
+      },
+      {
+        "CODI_ADUAN": "028",
+        "ADUANA_DESC": "TALARA",
+        "series": 18,
+        "fob_m": 294.74677075,
+        "cif_m": 313.998800125,
+        "tasa_log_med": 6.0195159912109375,
+        "pct_fob": 2.016096954789191
+      }
+    ],
+    "vias_transporte": [
+      {
+        "VIA_TRANSP_DESC": "VAPOR",
+        "series": 2077534,
+        "fob_m": 12621.514514936998,
+        "cif_m": 13723.73293491747,
+        "tasa_log_med": 5.540948867797852,
+        "tasa_log_media": 9.845666885375977,
+        "val_kg_med": 9.047378540039062,
+        "fob_med": 429.0065002441406,
+        "pct_fob": 86.33240294250811,
+        "pct_series": 65.84541113328636
+      },
+      {
+        "VIA_TRANSP_DESC": "AVION",
+        "series": 976809,
+        "fob_m": 1358.9358273390526,
+        "cif_m": 1451.7616582894755,
+        "tasa_log_med": 5.879294395446777,
+        "tasa_log_media": 11.95454216003418,
+        "val_kg_med": 98.93548583984375,
+        "fob_med": 104.97799682617188,
+        "pct_fob": 9.295254961676946,
+        "pct_series": 30.959007267122615
+      },
+      {
+        "VIA_TRANSP_DESC": "CAMION",
+        "series": 100753,
+        "fob_m": 637.3638976280566,
+        "cif_m": 664.0494671931262,
+        "tasa_log_med": 3.557142734527588,
+        "tasa_log_media": 10.741134643554688,
+        "val_kg_med": 10.836000442504883,
+        "fob_med": 257.6990051269531,
+        "pct_fob": 4.35963186239758,
+        "pct_series": 3.193267935885526
+      },
+      {
+        "VIA_TRANSP_DESC": "FLUVIAL",
+        "series": 6,
+        "fob_m": 1.7930311171875,
+        "cif_m": 2.1722258896484377,
+        "tasa_log_med": 21.46661376953125,
+        "tasa_log_media": 21.193286895751953,
+        "val_kg_med": 0.42519956827163696,
+        "fob_med": 328900.0,
+        "pct_fob": 0.012264509517799291,
+        "pct_series": 0.0001901641401775943
+      },
+      {
+        "VIA_TRANSP_DESC": "OTRA VIA",
+        "series": 67,
+        "fob_m": 0.06516337408065796,
+        "cif_m": 0.07217126697540283,
+        "tasa_log_med": 12.841019630432129,
+        "tasa_log_media": 14.497838020324707,
+        "val_kg_med": 133.87095642089844,
+        "fob_med": 660.0,
+        "pct_fob": 0.00044572389958170034,
+        "pct_series": 0.0021234995653164695
+      }
+    ],
+    "top10_secciones": [
+      {
+        "SECCION_ARANCELARIA": "V. Prod. minerales y combustibles",
+        "series": 7756,
+        "fob_m": 3203.055845678673,
+        "tasa_log_med": 4.685381889343262,
+        "tasa_adv_media": 0.09206690639257431,
+        "carga_trib_med": 18.000001907348633,
+        "pct_tlc": 1.083032490974729,
+        "val_kg_med": 3.743868350982666,
+        "pct_fob": 21.90921759739921
+      },
+      {
+        "SECCION_ARANCELARIA": "XVI. Maquinaria y equipo eléctrico",
+        "series": 796192,
+        "fob_m": 2904.2268748465776,
+        "tasa_log_med": 3.8589999675750732,
+        "tasa_adv_media": 0.37825313210487366,
+        "carga_trib_med": 17.999998092651367,
+        "pct_tlc": 0.11517322454885255,
+        "val_kg_med": 29.053234100341797,
+        "pct_fob": 19.86519799180909
+      },
+      {
+        "SECCION_ARANCELARIA": "XVII. Material de transporte",
+        "series": 456732,
+        "fob_m": 1789.8317900130437,
+        "tasa_log_med": 9.314697265625,
+        "tasa_adv_media": 0.7717111110687256,
+        "carga_trib_med": 18.002439498901367,
+        "pct_tlc": 0.006349456574095969,
+        "val_kg_med": 7.3655781745910645,
+        "pct_fob": 12.242625804680458
+      },
+      {
+        "SECCION_ARANCELARIA": "VI. Industrias químicas",
+        "series": 152680,
+        "fob_m": 1456.6438496177252,
+        "tasa_log_med": 4.073744297027588,
+        "tasa_adv_media": 1.4336535930633545,
+        "carga_trib_med": 18.00019073486328,
+        "pct_tlc": 0.2207230809536285,
+        "val_kg_med": 22.20883560180664,
+        "pct_fob": 9.963587461718445
+      },
+      {
+        "SECCION_ARANCELARIA": "XV. Metales comunes y manufacturas",
+        "series": 312880,
+        "fob_m": 1047.5790251334338,
+        "tasa_log_med": 5.111846923828125,
+        "tasa_adv_media": 1.9635746479034424,
+        "carga_trib_med": 18.000751495361328,
+        "pct_tlc": 0.13072104321145486,
+        "val_kg_med": 16.891891479492188,
+        "pct_fob": 7.165543755062651
+      },
+      {
+        "SECCION_ARANCELARIA": "VII. Plásticos y caucho",
+        "series": 252861,
+        "fob_m": 762.6907705209619,
+        "tasa_log_med": 7.094192028045654,
+        "tasa_adv_media": 2.8830373287200928,
+        "carga_trib_med": 18.0224666595459,
+        "pct_tlc": 0.3658136288316506,
+        "val_kg_med": 12.203263282775879,
+        "pct_fob": 5.216880022062577
+      },
+      {
+        "SECCION_ARANCELARIA": "IV. Alimentos y bebidas",
+        "series": 33818,
+        "fob_m": 682.4881340863087,
+        "tasa_log_med": 4.316341400146484,
+        "tasa_adv_media": 0.46800291538238525,
+        "carga_trib_med": 18.000015258789062,
+        "pct_tlc": 0.01182802058075581,
+        "val_kg_med": 3.310013771057129,
+        "pct_fob": 4.668286086086541
+      },
+      {
+        "SECCION_ARANCELARIA": "II. Prod. reino vegetal",
+        "series": 9590,
+        "fob_m": 532.3964806230304,
+        "tasa_log_med": 8.923221588134766,
+        "tasa_adv_media": 0.5743118524551392,
+        "carga_trib_med": 6.019065856933594,
+        "pct_tlc": 0.09384775808133472,
+        "val_kg_med": 1.3848052024841309,
+        "pct_fob": 3.6416443871237028
+      },
+      {
+        "SECCION_ARANCELARIA": "XI. Textiles y confecciones",
+        "series": 369503,
+        "fob_m": 501.976319673573,
+        "tasa_log_med": 5.005160331726074,
+        "tasa_adv_media": 9.572585105895996,
+        "carga_trib_med": 30.979887008666992,
+        "pct_tlc": 0.16102710938747453,
+        "val_kg_med": 25.7560977935791,
+        "pct_fob": 3.433567488780286
+      },
+      {
+        "SECCION_ARANCELARIA": "XX. Mercancías diversas (muebles/juguetes)",
+        "series": 157818,
+        "fob_m": 322.06387319683404,
+        "tasa_log_med": 17.25132942199707,
+        "tasa_adv_media": 2.3691744804382324,
+        "carga_trib_med": 18.00074577331543,
+        "pct_tlc": 0.050057661356752714,
+        "val_kg_med": 4.5246901512146,
+        "pct_fob": 2.2029486272149406
+      }
+    ],
+    "regiones": [
+      {
+        "REGION_ORIGEN": "Asia",
+        "series": 2115479,
+        "fob_m": 6096.943416525516,
+        "tasa_log_med": 6.87375020980835,
+        "tasa_adv_media": 2.8647453784942627,
+        "pct_tlc": 0.06948780867122764,
+        "pct_fob": 41.70369373106729
+      },
+      {
+        "REGION_ORIGEN": "Norteamérica",
+        "series": 311201,
+        "fob_m": 3922.6438178822405,
+        "tasa_log_med": 3.2004191875457764,
+        "tasa_adv_media": 1.398958444595337,
+        "pct_tlc": 0.2715286904605062,
+        "pct_fob": 26.8312702318386
+      },
+      {
+        "REGION_ORIGEN": "Sudamérica",
+        "series": 302465,
+        "fob_m": 3024.3464698241282,
+        "tasa_log_med": 4.124479293823242,
+        "tasa_adv_media": 1.8064202070236206,
+        "pct_tlc": 0.5190683219546064,
+        "pct_fob": 20.68682785743418
+      },
+      {
+        "REGION_ORIGEN": "Europa",
+        "series": 388893,
+        "fob_m": 1219.3224213136705,
+        "tasa_log_med": 3.9836907386779785,
+        "tasa_adv_media": 1.170678734779358,
+        "pct_tlc": 0.11802732371114934,
+        "pct_fob": 8.340285507662935
+      },
+      {
+        "REGION_ORIGEN": "Centroamérica y Caribe",
+        "series": 8138,
+        "fob_m": 223.8070606939119,
+        "tasa_log_med": 3.738677978515625,
+        "tasa_adv_media": 3.4388680458068848,
+        "pct_tlc": 0.29491275497665276,
+        "pct_fob": 1.5308623479645551
+      },
+      {
+        "REGION_ORIGEN": "Oceanía",
+        "series": 3028,
+        "fob_m": 55.86432555271104,
+        "tasa_log_med": 4.723568916320801,
+        "tasa_adv_media": 1.2801021337509155,
+        "pct_tlc": 4.359313077939234,
+        "pct_fob": 0.382117491369234
+      },
+      {
+        "REGION_ORIGEN": "Otros / No especificado",
+        "series": 5572,
+        "fob_m": 44.73405343802556,
+        "tasa_log_med": 3.9938948154449463,
+        "tasa_adv_media": 4.3453569412231445,
+        "pct_tlc": 13.63962670495334,
+        "pct_fob": 0.30598533338394607
+      },
+      {
+        "REGION_ORIGEN": "África",
+        "series": 20393,
+        "fob_m": 32.01086916517285,
+        "tasa_log_med": 5.6401567459106445,
+        "tasa_adv_media": 9.285111427307129,
+        "pct_tlc": 0.1618202324326975,
+        "pct_fob": 0.21895749927926972
+      }
+    ],
+    "semanal": [
+      {
+        "semana_lbl": "S01",
+        "series": 298338,
+        "fob_m": 1493.5703074569199,
+        "cif_m": 1605.106324884121,
+        "trib_m": 299.50731256343954,
+        "tasa_log_mediana": 5.329999923706055,
+        "tasa_log_pond_pct": 7.467744299703228
+      },
+      {
+        "semana_lbl": "S02",
+        "series": 309625,
+        "fob_m": 1514.6635291475764,
+        "cif_m": 1629.8037812231125,
+        "trib_m": 300.1221831808939,
+        "tasa_log_mediana": 5.344169616699219,
+        "tasa_log_pond_pct": 7.6017047513442195
+      },
+      {
+        "semana_lbl": "S03",
+        "series": 296246,
+        "fob_m": 1391.288231979404,
+        "cif_m": 1494.8009373895834,
+        "trib_m": 282.66673911067306,
+        "tasa_log_mediana": 5.3949151039123535,
+        "tasa_log_pond_pct": 7.44006189150734
+      },
+      {
+        "semana_lbl": "S04",
+        "series": 315530,
+        "fob_m": 1301.8829752186223,
+        "cif_m": 1416.1921496942455,
+        "trib_m": 269.47930289782465,
+        "tasa_log_mediana": 5.873565196990967,
+        "tasa_log_pond_pct": 8.78029567040972
+      },
+      {
+        "semana_lbl": "S05",
+        "series": 292674,
+        "fob_m": 1582.676735637828,
+        "cif_m": 1714.5568634435592,
+        "trib_m": 323.70919322309385,
+        "tasa_log_mediana": 5.601749420166016,
+        "tasa_log_pond_pct": 8.33272651141051
+      },
+      {
+        "semana_lbl": "S06",
+        "series": 341765,
+        "fob_m": 1427.8599063119082,
+        "cif_m": 1557.3592206072708,
+        "trib_m": 285.3413488009868,
+        "tasa_log_mediana": 5.577037334442139,
+        "tasa_log_pond_pct": 9.069469066288677
+      },
+      {
+        "semana_lbl": "S07",
+        "series": 336902,
+        "fob_m": 1456.2589882579289,
+        "cif_m": 1581.6187928194306,
+        "trib_m": 299.76468887628016,
+        "tasa_log_mediana": 5.858782768249512,
+        "tasa_log_pond_pct": 8.60834510195492
+      },
+      {
+        "semana_lbl": "S08",
+        "series": 337796,
+        "fob_m": 1459.2906147548335,
+        "cif_m": 1591.6150601527024,
+        "trib_m": 300.9397180157715,
+        "tasa_log_mediana": 5.67735481262207,
+        "tasa_log_pond_pct": 9.067724121899923
+      },
+      {
+        "semana_lbl": "S09",
+        "series": 310194,
+        "fob_m": 1626.733733648258,
+        "cif_m": 1768.3535757549187,
+        "trib_m": 315.44876675398456,
+        "tasa_log_mediana": 5.806027412414551,
+        "tasa_log_pond_pct": 8.705778780772805
+      },
+      {
+        "semana_lbl": "S10",
+        "series": 316099,
+        "fob_m": 1365.4474119820984,
+        "cif_m": 1482.3817515877524,
+        "trib_m": 266.66116779632017,
+        "tasa_log_mediana": 5.467351913452148,
+        "tasa_log_pond_pct": 8.563811400973021
+      }
+    ]
+  },
+  "base_final": {
+    "filas": 3155169,
+    "columnas": 69,
+    "tamano_parquet_mb": 189.23,
+    "tasa_alto_sobrecosto_pct": 12.019,
+    "umbral_alto_sobrecosto_pct": 20.0
+  },
+  "supervisado": {
+    "n_train": 2528876,
+    "n_test": 626293,
+    "regresion_tabla": [
+      {
+        "Modelo": "0. Dummy (Media)",
+        "RMSE_log": 0.9195,
+        "MAE_log": 0.7352,
+        "R2_log": -0.0001,
+        "MAE_pp": 7.974,
+        "MdAE_pp": 3.933,
+        "Tiempo_s": 0.1
+      },
+      {
+        "Modelo": "1. Línea Base: Ridge (OLS Reg.)",
+        "RMSE_log": 0.5617,
+        "MAE_log": 0.4349,
+        "R2_log": 0.6268,
+        "MAE_pp": 5.305,
+        "MdAE_pp": 2.177,
+        "Tiempo_s": 12.8
+      },
+      {
+        "Modelo": "2. Alternativo: HistGradientBoosting",
+        "RMSE_log": 0.4665,
+        "MAE_log": 0.3474,
+        "R2_log": 0.7426,
+        "MAE_pp": 4.292,
+        "MdAE_pp": 1.567,
+        "Tiempo_s": 220.4
+      },
+      {
+        "Modelo": "3. Alternativo: LightGBM Regressor",
+        "RMSE_log": 0.4519,
+        "MAE_log": 0.3322,
+        "R2_log": 0.7584,
+        "MAE_pp": 4.162,
+        "MdAE_pp": 1.509,
+        "Tiempo_s": 140.6
+      }
+    ],
+    "regresion_train_r2": {
+      "Ridge": 0.6278,
+      "HGB": 0.782,
+      "LightGBM": 0.8179
+    },
+    "ridge_coefs_estandarizados": {
+      "LOG_VALOR_UNIT_KG": -0.5857,
+      "LOG_FOB": -0.3029,
+      "LOG_SERIES_EN_DAM": -0.1968,
+      "TIENE_DIAS_TRANSITO": -0.0215,
+      "LOG_CANT_BULTO": -0.0201,
+      "TIENE_LIBERACION": -0.0147,
+      "ES_RUC_EMPRESA": -0.0098,
+      "TIENE_TLC_PREF": -0.0066,
+      "ES_TELEDESPACHO": 0.0,
+      "DIAS_DESPACHO_VAL": 0.0077,
+      "LONG_DESC_COMER": 0.0181,
+      "PAGO_INMEDIATO": 0.0192,
+      "ES_MERCANCIA_NUEVA": 0.0257,
+      "LOG_PESO_NETO": 0.0296,
+      "DIAS_TRANSITO_VAL": 0.0344,
+      "TE_CODI_ADUAN": 0.0352,
+      "TE_PAIS_ORIGE_STR": 0.0978,
+      "RATIO_EMBALAJE_LOG": 0.1106,
+      "ORIGEN_EQ_ADQUI": 0.1123,
+      "TE_CAPITULO_HS2": 0.1435,
+      "LOG_PESO_BRUTO": 0.2093
+    },
+    "lgb_reg_importancia_top15": {
+      "LOG_VALOR_UNIT_KG": 47.37,
+      "TE_CODI_ADUAN": 7.01,
+      "TE_PAIS_ORIGE_STR": 6.1,
+      "TE_CAPITULO_HS2": 5.03,
+      "REGION_ORIGEN": 4.86,
+      "LOG_SERIES_EN_DAM": 4.7,
+      "VIA_TRANSP_STR": 4.7,
+      "SECCION_ARANCELARIA": 4.69,
+      "RATIO_EMBALAJE_LOG": 3.34,
+      "LOG_FOB": 2.68,
+      "DIAS_TRANSITO_VAL": 2.34,
+      "ORIGEN_EQ_ADQUI": 2.28,
+      "LOG_PESO_BRUTO": 1.28,
+      "LOG_PESO_NETO": 0.84,
+      "LONG_DESC_COMER": 0.7
+    },
+    "clasificacion_tabla": [
+      {
+        "Modelo": "0. Dummy (Clase Mayoritaria)",
+        "ROC_AUC": 0.5,
+        "PR_AUC": 0.12,
+        "F1": 0.0,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "Bal_Acc": 0.5,
+        "Accuracy": 0.88,
+        "Brier": 0.12,
+        "Umbral": 0.5,
+        "Tiempo_s": 0.3
+      },
+      {
+        "Modelo": "1. Línea Base: Logistic Regression",
+        "ROC_AUC": 0.9226,
+        "PR_AUC": 0.6953,
+        "F1": 0.5534,
+        "Precision": 0.4097,
+        "Recall": 0.8524,
+        "Bal_Acc": 0.8425,
+        "Accuracy": 0.8349,
+        "Brier": 0.1139,
+        "Umbral": 0.5,
+        "Tiempo_s": 50.6
+      },
+      {
+        "Modelo": "2. Alternativo: HistGradientBoosting",
+        "ROC_AUC": 0.9362,
+        "PR_AUC": 0.7414,
+        "F1": 0.6177,
+        "Precision": 0.4917,
+        "Recall": 0.8306,
+        "Bal_Acc": 0.8567,
+        "Accuracy": 0.8766,
+        "Brier": 0.0868,
+        "Umbral": 0.5,
+        "Tiempo_s": 168.0
+      },
+      {
+        "Modelo": "3. Alternativo: LightGBM (umbral S08)",
+        "ROC_AUC": 0.9382,
+        "PR_AUC": 0.7539,
+        "F1": 0.6771,
+        "Precision": 0.6553,
+        "Recall": 0.7004,
+        "Bal_Acc": 0.8251,
+        "Accuracy": 0.9198,
+        "Brier": 0.0538,
+        "Umbral": 0.308,
+        "Tiempo_s": 174.2
+      }
+    ],
+    "lgb_clf_umbral_optimo_s08": 0.3079,
+    "lgb_clf_confusion_matrix": [
+      [
+        523451,
+        27688
+      ],
+      [
+        22517,
+        52637
+      ]
+    ]
+  },
+  "no_supervisado": {
+    "pca_base_completa_filas": 3155169,
+    "pca_var_explicada_pct": [
+      34.19,
+      24.05,
+      16.85,
+      13.95,
+      6.77,
+      3.67,
+      0.52
+    ],
+    "pca_var_acumulada_pct": [
+      34.19,
+      58.24,
+      75.09,
+      89.04,
+      95.81,
+      99.48,
+      100.0
+    ],
+    "pca_autovalores": [
+      2.393,
+      1.684,
+      1.179,
+      0.977,
+      0.474,
+      0.257,
+      0.036
+    ],
+    "pca_cargas_cp1_cp2": {
+      "log(FOB)": {
+        "CP1": 0.473,
+        "CP2": -0.001
+      },
+      "log(Peso Neto)": {
+        "CP1": 0.607,
+        "CP2": 0.137
+      },
+      "log(Valor/kg)": {
+        "CP1": -0.473,
+        "CP2": -0.242
+      },
+      "log(Tasa Log. %)": {
+        "CP1": 0.241,
+        "CP2": 0.191
+      },
+      "Tasa ADV (%)": {
+        "CP1": -0.264,
+        "CP2": 0.638
+      },
+      "Carga Trib. (%)": {
+        "CP1": -0.131,
+        "CP2": 0.688
+      },
+      "log(Ratio Embalaje)": {
+        "CP1": -0.197,
+        "CP2": -0.079
+      }
+    },
+    "svd_recon_mse_3c": 0.2491,
+    "n_muestra_estratificada_full": 12000,
+    "n_muestra_benchmark_ari": 3000,
+    "k_optimo_seleccionado": 4,
+    "tabla_12_algoritmos": [
+      {
+        "Familia": "1. Particiones",
+        "Metodo": "1A. K-Means (k-means++)",
+        "K_efectivo": 4,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.2674,
+        "Davies_Bouldin": 1.2688,
+        "Calinski_Harabasz": 840.4,
+        "Metrica_Especifica": "Inercia=11,645 (k=4)",
+        "Tiempo_s": 0.14
+      },
+      {
+        "Familia": "1. Particiones",
+        "Metodo": "1B. K-Medoids (FasterPAM)",
+        "K_efectivo": 4,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.2069,
+        "Davies_Bouldin": 1.508,
+        "Calinski_Harabasz": 738.4,
+        "Metrica_Especifica": "FasterPAM pérdida=5,367 (k=4)",
+        "Tiempo_s": 1.07
+      },
+      {
+        "Familia": "2. Jerárquicos",
+        "Metodo": "2A. Agglomerative (Ward)",
+        "K_efectivo": 4,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.2276,
+        "Davies_Bouldin": 1.359,
+        "Calinski_Harabasz": 657.9,
+        "Metrica_Especifica": "Cofenética=0.409 (k=4)",
+        "Tiempo_s": 1.13
+      },
+      {
+        "Familia": "2. Jerárquicos",
+        "Metodo": "2B. Agglomerative (Complete)",
+        "K_efectivo": 4,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.5819,
+        "Davies_Bouldin": 0.7621,
+        "Calinski_Harabasz": 97.4,
+        "Metrica_Especifica": "Cofenética Comp=0.560 (vs Avg=0.773)",
+        "Tiempo_s": 2.18
+      },
+      {
+        "Familia": "3. Densidad",
+        "Metodo": "3A. DBSCAN",
+        "K_efectivo": 2,
+        "Ruido_pct": 2.7,
+        "Silueta": 0.258,
+        "Davies_Bouldin": 1.5728,
+        "Calinski_Harabasz": 876.5,
+        "Metrica_Especifica": "eps=1.45, min_samples=14",
+        "Tiempo_s": 1.99
+      },
+      {
+        "Familia": "3. Densidad",
+        "Metodo": "3B. HDBSCAN",
+        "K_efectivo": 4,
+        "Ruido_pct": 13.03,
+        "Silueta": 0.2161,
+        "Davies_Bouldin": 1.7952,
+        "Calinski_Harabasz": 481.4,
+        "Metrica_Especifica": "Prob. media pertenencia=0.704",
+        "Tiempo_s": 0.15
+      },
+      {
+        "Familia": "4. Probabilísticos",
+        "Metodo": "4A. Gaussian Mixture (GMM)",
+        "K_efectivo": 4,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.1659,
+        "Davies_Bouldin": 4.6677,
+        "Calinski_Harabasz": 361.1,
+        "Metrica_Especifica": "BIC=5,706, Entropía=0.047",
+        "Tiempo_s": 1.29
+      },
+      {
+        "Familia": "4. Probabilísticos",
+        "Metodo": "4B. Bayesian GMM (Dirichlet)",
+        "K_efectivo": 8,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.0823,
+        "Davies_Bouldin": 2.8966,
+        "Calinski_Harabasz": 250.2,
+        "Metrica_Especifica": "Comp. activos (>2%)=8/8, ELBO=12,288.3",
+        "Tiempo_s": 3.7
+      },
+      {
+        "Familia": "5. Grafos / Espectral",
+        "Metodo": "5A. Spectral Clustering (k-NN)",
+        "K_efectivo": 4,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.1653,
+        "Davies_Bouldin": 2.0162,
+        "Calinski_Harabasz": 365.0,
+        "Metrica_Especifica": "λ2=0.0031, max eigengap en k=6",
+        "Tiempo_s": 0.87
+      },
+      {
+        "Familia": "5. Grafos / Espectral",
+        "Metodo": "5B. Affinity Propagation",
+        "K_efectivo": 16,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.2106,
+        "Davies_Bouldin": 1.1974,
+        "Calinski_Harabasz": 520.0,
+        "Metrica_Especifica": "preference=-227, ejemplares=16",
+        "Tiempo_s": 78.51
+      },
+      {
+        "Familia": "6. Cuadrícula / Difuso",
+        "Metodo": "6A. BIRCH (CF-Tree)",
+        "K_efectivo": 4,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.1769,
+        "Davies_Bouldin": 1.2931,
+        "Calinski_Harabasz": 144.9,
+        "Metrica_Especifica": "Subclusters CF=124 (thr=1.1)",
+        "Tiempo_s": 0.09
+      },
+      {
+        "Familia": "6. Cuadrícula / Difuso",
+        "Metodo": "6B. Fuzzy C-Means (Bezdek m=2)",
+        "K_efectivo": 4,
+        "Ruido_pct": 0.0,
+        "Silueta": 0.1723,
+        "Davies_Bouldin": 1.8673,
+        "Calinski_Harabasz": 704.1,
+        "Metrica_Especifica": "PC=0.369, PE=1.169",
+        "Tiempo_s": 0.07
+      }
+    ],
+    "ari_pares_clave": {
+      "KMeans_vs_GMM": 0.3793,
+      "KMeans_vs_Ward": 0.6335,
+      "KMeans_vs_BIRCH": 0.0576
+    },
+    "ari_matriz_12x12": {
+      "1A. K-Means": {
+        "1A. K-Means": 1.0,
+        "1B. K-Medoids": 0.562,
+        "2A. Jerárq. Ward": 0.633,
+        "2B. Jerárq. Avg/Comp": 0.009,
+        "3A. DBSCAN": 0.419,
+        "3B. HDBSCAN": 0.314,
+        "4A. GMM (EM)": 0.379,
+        "4B. Bayesian GMM": 0.258,
+        "5A. Spectral": 0.303,
+        "5B. Affinity Prop.": 0.264,
+        "6A. BIRCH": 0.058,
+        "6B. Fuzzy C-Means": 0.685
+      },
+      "1B. K-Medoids": {
+        "1A. K-Means": 0.562,
+        "1B. K-Medoids": 1.0,
+        "2A. Jerárq. Ward": 0.436,
+        "2B. Jerárq. Avg/Comp": -0.0,
+        "3A. DBSCAN": 0.25,
+        "3B. HDBSCAN": 0.186,
+        "4A. GMM (EM)": 0.244,
+        "4B. Bayesian GMM": 0.145,
+        "5A. Spectral": 0.212,
+        "5B. Affinity Prop.": 0.257,
+        "6A. BIRCH": -0.006,
+        "6B. Fuzzy C-Means": 0.568
+      },
+      "2A. Jerárq. Ward": {
+        "1A. K-Means": 0.633,
+        "1B. K-Medoids": 0.436,
+        "2A. Jerárq. Ward": 1.0,
+        "2B. Jerárq. Avg/Comp": 0.009,
+        "3A. DBSCAN": 0.488,
+        "3B. HDBSCAN": 0.343,
+        "4A. GMM (EM)": 0.42,
+        "4B. Bayesian GMM": 0.297,
+        "5A. Spectral": 0.366,
+        "5B. Affinity Prop.": 0.249,
+        "6A. BIRCH": 0.047,
+        "6B. Fuzzy C-Means": 0.516
+      },
+      "2B. Jerárq. Avg/Comp": {
+        "1A. K-Means": 0.009,
+        "1B. K-Medoids": -0.0,
+        "2A. Jerárq. Ward": 0.009,
+        "2B. Jerárq. Avg/Comp": 1.0,
+        "3A. DBSCAN": 0.028,
+        "3B. HDBSCAN": 0.01,
+        "4A. GMM (EM)": 0.004,
+        "4B. Bayesian GMM": 0.009,
+        "5A. Spectral": -0.007,
+        "5B. Affinity Prop.": 0.002,
+        "6A. BIRCH": 0.123,
+        "6B. Fuzzy C-Means": 0.0
+      },
+      "3A. DBSCAN": {
+        "1A. K-Means": 0.419,
+        "1B. K-Medoids": 0.25,
+        "2A. Jerárq. Ward": 0.488,
+        "2B. Jerárq. Avg/Comp": 0.028,
+        "3A. DBSCAN": 1.0,
+        "3B. HDBSCAN": 0.628,
+        "4A. GMM (EM)": 0.467,
+        "4B. Bayesian GMM": 0.405,
+        "5A. Spectral": 0.727,
+        "5B. Affinity Prop.": 0.131,
+        "6A. BIRCH": 0.054,
+        "6B. Fuzzy C-Means": 0.312
+      },
+      "3B. HDBSCAN": {
+        "1A. K-Means": 0.314,
+        "1B. K-Medoids": 0.186,
+        "2A. Jerárq. Ward": 0.343,
+        "2B. Jerárq. Avg/Comp": 0.01,
+        "3A. DBSCAN": 0.628,
+        "3B. HDBSCAN": 1.0,
+        "4A. GMM (EM)": 0.429,
+        "4B. Bayesian GMM": 0.511,
+        "5A. Spectral": 0.768,
+        "5B. Affinity Prop.": 0.19,
+        "6A. BIRCH": 0.051,
+        "6B. Fuzzy C-Means": 0.209
+      },
+      "4A. GMM (EM)": {
+        "1A. K-Means": 0.379,
+        "1B. K-Medoids": 0.244,
+        "2A. Jerárq. Ward": 0.42,
+        "2B. Jerárq. Avg/Comp": 0.004,
+        "3A. DBSCAN": 0.467,
+        "3B. HDBSCAN": 0.429,
+        "4A. GMM (EM)": 1.0,
+        "4B. Bayesian GMM": 0.484,
+        "5A. Spectral": 0.395,
+        "5B. Affinity Prop.": 0.209,
+        "6A. BIRCH": 0.022,
+        "6B. Fuzzy C-Means": 0.412
+      },
+      "4B. Bayesian GMM": {
+        "1A. K-Means": 0.258,
+        "1B. K-Medoids": 0.145,
+        "2A. Jerárq. Ward": 0.297,
+        "2B. Jerárq. Avg/Comp": 0.009,
+        "3A. DBSCAN": 0.405,
+        "3B. HDBSCAN": 0.511,
+        "4A. GMM (EM)": 0.484,
+        "4B. Bayesian GMM": 1.0,
+        "5A. Spectral": 0.445,
+        "5B. Affinity Prop.": 0.196,
+        "6A. BIRCH": 0.041,
+        "6B. Fuzzy C-Means": 0.212
+      },
+      "5A. Spectral": {
+        "1A. K-Means": 0.303,
+        "1B. K-Medoids": 0.212,
+        "2A. Jerárq. Ward": 0.366,
+        "2B. Jerárq. Avg/Comp": -0.007,
+        "3A. DBSCAN": 0.727,
+        "3B. HDBSCAN": 0.768,
+        "4A. GMM (EM)": 0.395,
+        "4B. Bayesian GMM": 0.445,
+        "5A. Spectral": 1.0,
+        "5B. Affinity Prop.": 0.173,
+        "6A. BIRCH": -0.039,
+        "6B. Fuzzy C-Means": 0.231
+      },
+      "5B. Affinity Prop.": {
+        "1A. K-Means": 0.264,
+        "1B. K-Medoids": 0.257,
+        "2A. Jerárq. Ward": 0.249,
+        "2B. Jerárq. Avg/Comp": 0.002,
+        "3A. DBSCAN": 0.131,
+        "3B. HDBSCAN": 0.19,
+        "4A. GMM (EM)": 0.209,
+        "4B. Bayesian GMM": 0.196,
+        "5A. Spectral": 0.173,
+        "5B. Affinity Prop.": 1.0,
+        "6A. BIRCH": 0.015,
+        "6B. Fuzzy C-Means": 0.28
+      },
+      "6A. BIRCH": {
+        "1A. K-Means": 0.058,
+        "1B. K-Medoids": -0.006,
+        "2A. Jerárq. Ward": 0.047,
+        "2B. Jerárq. Avg/Comp": 0.123,
+        "3A. DBSCAN": 0.054,
+        "3B. HDBSCAN": 0.051,
+        "4A. GMM (EM)": 0.022,
+        "4B. Bayesian GMM": 0.041,
+        "5A. Spectral": -0.039,
+        "5B. Affinity Prop.": 0.015,
+        "6A. BIRCH": 1.0,
+        "6B. Fuzzy C-Means": 0.006
+      },
+      "6B. Fuzzy C-Means": {
+        "1A. K-Means": 0.685,
+        "1B. K-Medoids": 0.568,
+        "2A. Jerárq. Ward": 0.516,
+        "2B. Jerárq. Avg/Comp": 0.0,
+        "3A. DBSCAN": 0.312,
+        "3B. HDBSCAN": 0.209,
+        "4A. GMM (EM)": 0.412,
+        "4B. Bayesian GMM": 0.212,
+        "5A. Spectral": 0.231,
+        "5B. Affinity Prop.": 0.28,
+        "6A. BIRCH": 0.006,
+        "6B. Fuzzy C-Means": 1.0
+      }
+    },
+    "campeon_12k": {
+      "algoritmo": "K-Means (k=4)",
+      "silueta": 0.2663,
+      "davies_bouldin": 1.3135,
+      "calinski_harabasz": 3356.9
+    },
+    "perfiles_economicos_originales": [
+      {
+        "CLUSTER_ID": 0,
+        "n_obs": 2969,
+        "fob_media": 496.0419921875,
+        "fob_mediana": 79.30699920654297,
+        "peso_media": 26.05699920654297,
+        "peso_mediana": 1.9910000562667847,
+        "val_kg_media": 262.69500732421875,
+        "val_kg_mediana": 33.69599914550781,
+        "tasa_log_media": 7.499000072479248,
+        "tasa_log_mediana": 4.607999801635742,
+        "adv_media": 8.338000297546387,
+        "adv_mediana": 6.041999816894531,
+        "trib_media": 28.344999313354492,
+        "trib_mediana": 25.68600082397461,
+        "pct_aereo": 42.337,
+        "pct_maritimo": 54.564,
+        "pct_tlc": 0.067,
+        "seccion_top": "XI. Textiles y confecciones",
+        "pais_top": "CHINA",
+        "pct_muestra": 24.74,
+        "NOMBRE_ECONOMICO": "Bienes Gravados / Alta Protección Arancelaria"
+      },
+      {
+        "CLUSTER_ID": 1,
+        "n_obs": 4373,
+        "fob_media": 781.6119995117188,
+        "fob_mediana": 141.0,
+        "peso_media": 12.220999717712402,
+        "peso_mediana": 3.515000104904175,
+        "val_kg_media": 307.6239929199219,
+        "val_kg_mediana": 32.9370002746582,
+        "tasa_log_media": 6.800000190734863,
+        "tasa_log_mediana": 3.696000099182129,
+        "adv_media": 0.012000000104308128,
+        "adv_mediana": 0.0,
+        "trib_media": 15.468999862670898,
+        "trib_mediana": 18.0,
+        "pct_aereo": 43.06,
+        "pct_maritimo": 54.608,
+        "pct_tlc": 0.114,
+        "seccion_top": "XVI. Maquinaria y equipo eléctri",
+        "pais_top": "CHINA",
+        "pct_muestra": 36.44,
+        "NOMBRE_ECONOMICO": "Importación Comercial Estándar (Arancel ≈ 0%, Bajo Sobrecosto)"
+      },
+      {
+        "CLUSTER_ID": 2,
+        "n_obs": 3943,
+        "fob_media": 8583.9384765625,
+        "fob_mediana": 1392.0,
+        "peso_media": 4013.97412109375,
+        "peso_mediana": 282.2669982910156,
+        "val_kg_media": 7.815000057220459,
+        "val_kg_mediana": 4.482999801635742,
+        "tasa_log_media": 16.593000411987305,
+        "tasa_log_mediana": 11.213000297546387,
+        "adv_media": 1.0169999599456787,
+        "adv_mediana": 0.0,
+        "trib_media": 20.503999710083008,
+        "trib_mediana": 18.0,
+        "pct_aereo": 4.261,
+        "pct_maritimo": 91.859,
+        "pct_tlc": 0.076,
+        "seccion_top": "XVII. Material de transporte",
+        "pais_top": "CHINA",
+        "pct_muestra": 32.86,
+        "NOMBRE_ECONOMICO": "Carga Masiva Marítima (Bajo Valor/kg, Mayor Sobrecosto)"
+      },
+      {
+        "CLUSTER_ID": 3,
+        "n_obs": 715,
+        "fob_media": 2373.785888671875,
+        "fob_mediana": 104.33999633789062,
+        "peso_media": 45.63100051879883,
+        "peso_mediana": 1.3250000476837158,
+        "val_kg_media": 3785.677001953125,
+        "val_kg_mediana": 66.84200286865234,
+        "tasa_log_media": 12.96500015258789,
+        "tasa_log_mediana": 4.3520002365112305,
+        "adv_media": 1.3049999475479126,
+        "adv_mediana": 0.0,
+        "trib_media": 18.92099952697754,
+        "trib_mediana": 18.000999450683594,
+        "pct_aereo": 56.923,
+        "pct_maritimo": 37.902,
+        "pct_tlc": 0.42,
+        "seccion_top": "XVI. Maquinaria y equipo eléctri",
+        "pais_top": "CHINA",
+        "pct_muestra": 5.96,
+        "NOMBRE_ECONOMICO": "Carga Especializada de Alto Valor/kg (Aéreo / Tech)"
+      }
+    ]
+  },
+  "validacion_robustez": {
+    "cv5_ridge_rmse_mean": 0.5601,
+    "cv5_ridge_r2_mean": 0.6284,
+    "cv5_lgb_reg_rmse_mean": 0.4021,
+    "cv5_lgb_reg_rmse_std": 0.0031,
+    "cv5_lgb_reg_r2_mean": 0.8085,
+    "cv5_lgb_reg_r2_std": 0.0017,
+    "cv5_lgb_clf_roc_mean": 0.9779,
+    "cv5_lgb_clf_pr_mean": 0.88,
+    "tuning_grid": [
+      {
+        "num_leaves": 31,
+        "learning_rate": 0.08,
+        "min_child_samples": 100,
+        "RMSE_train_S1_S7": 0.4189,
+        "RMSE_val_S8": 0.4629,
+        "R2_val_S8": 0.7594
+      },
+      {
+        "num_leaves": 63,
+        "learning_rate": 0.07,
+        "min_child_samples": 80,
+        "RMSE_train_S1_S7": 0.3924,
+        "RMSE_val_S8": 0.452,
+        "R2_val_S8": 0.7705
+      },
+      {
+        "num_leaves": 95,
+        "learning_rate": 0.05,
+        "min_child_samples": 60,
+        "RMSE_train_S1_S7": 0.3863,
+        "RMSE_val_S8": 0.4492,
+        "R2_val_S8": 0.7734
+      }
+    ],
+    "sensibilidad": [
+      {
+        "Escenario": "Test Completo (S09–S10)",
+        "N_obs": 626293,
+        "RMSE_log": 0.4519,
+        "R2_log": 0.7584,
+        "MAE_pp": 4.162
+      },
+      {
+        "Escenario": "Sin Outliers Logísticos (>P99.5)",
+        "N_obs": 622712,
+        "RMSE_log": 0.4478,
+        "R2_log": 0.7486,
+        "MAE_pp": 3.812
+      },
+      {
+        "Escenario": "Solo Vía Marítima (VAPOR)",
+        "N_obs": 407902,
+        "RMSE_log": 0.4626,
+        "R2_log": 0.7503,
+        "MAE_pp": 3.908
+      },
+      {
+        "Escenario": "Solo Vía Aérea (AVION)",
+        "N_obs": 197108,
+        "RMSE_log": 0.4326,
+        "R2_log": 0.7569,
+        "MAE_pp": 4.701
+      }
+    ],
+    "estabilidad_semanal": [
+      {
+        "SEMANA": 9,
+        "n": 310194,
+        "rmse_log": 0.4584,
+        "r2_log": 0.7496,
+        "mae_pp": 4.281
+      },
+      {
+        "SEMANA": 10,
+        "n": 316099,
+        "rmse_log": 0.4454,
+        "r2_log": 0.7662,
+        "mae_pp": 4.0445
+      }
+    ],
+    "error_por_via": [
+      {
+        "VIA_TRANSP_DESC": "VAPOR",
+        "n": 407902,
+        "rmse_log": 0.4626,
+        "mae_pp": 3.9081,
+        "mdae_pp": 1.5802,
+        "sesgo_log": 0.0314
+      },
+      {
+        "VIA_TRANSP_DESC": "AVION",
+        "n": 197108,
+        "rmse_log": 0.4326,
+        "mae_pp": 4.701,
+        "mdae_pp": 1.4433,
+        "sesgo_log": 0.0093
+      },
+      {
+        "VIA_TRANSP_DESC": "CAMION",
+        "n": 21250,
+        "rmse_log": 0.4156,
+        "mae_pp": 4.0146,
+        "mdae_pp": 0.8158,
+        "sesgo_log": -0.0283
+      },
+      {
+        "VIA_TRANSP_DESC": "OTRA VIA",
+        "n": 29,
+        "rmse_log": 1.0962,
+        "mae_pp": 12.664,
+        "mdae_pp": 7.8376,
+        "sesgo_log": 0.9442
+      },
+      {
+        "VIA_TRANSP_DESC": "FLUVIAL",
+        "n": 4,
+        "rmse_log": 0.4361,
+        "mae_pp": 7.6712,
+        "mdae_pp": 7.568,
+        "sesgo_log": 0.4347
+      }
+    ],
+    "clustering_estabilidad_ari_semillas": 0.9974,
+    "clustering_estabilidad_ari_split_half": 0.9646
+  }
+}

@@ -1,0 +1,16 @@
+# Dependencias reproducibles verificadas en Google Colab (Python 3.13.18, SEED=2026)
+# Trabajo Final Integrador — Ciencia de Datos para Economistas (2026-2) — Grupo 9
+numpy>=2.0.0
+pandas>=2.2.3
+pyarrow>=17.0.0
+scipy>=1.14.0
+scikit-learn>=1.6.0
+lightgbm>=4.5.0
+matplotlib>=3.9.0
+seaborn>=0.13.0
+plotly>=5.24.0
+requests>=2.31.0
+dbfread>=2.0.7
+xlrd>=2.0.1
+pycountry>=24.6.1
+kmedoids>=0.5.3
