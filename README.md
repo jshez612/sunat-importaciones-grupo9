@@ -6,7 +6,7 @@
 **Universidad de Lima — Facultad de Economía — Carrera de Economía**  
 **Asignatura:** Ciencia de Datos para Economistas | **Período Académico:** `2026-2`  
 **Docente:** Angel Agüero Correa  
-**Equipo (Grupo 9):** `Integrante 1`, `Integrante 2`, `Integrante 3`, `Integrante 4`
+**Equipo (Grupo 9):** Leandro Chavez Cueva, Lesly Condori Huanca, Jose Mariano Castro, Fabrizio Delgado Chavez
 
 ---
 
