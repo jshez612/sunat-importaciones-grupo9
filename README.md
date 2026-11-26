@@ -22,8 +22,7 @@ Este proyecto analiza el universo completo de **Importación Definitiva (Formato
 - **URL base directa de ingesta remota en Colab:** `https://raw.githubusercontent.com/jshez612/sunat-importaciones-grupo9/main/datos_crudos/`
 - **Volumen verificado:** **3,155,169 registros × 58 variables crudas** (185.31 MB en `.zip`, 2,554.66 MB en `.DBF`) → **3,155,169 registros × 69 variables finales** (`> 2,000,000` filas exigidas por el docente).
 - **Licencia y uso:** Datos públicos administrativos difundidos por SUNAT al amparo del Art. 1 de la **Ley N° 27806** (Ley de Transparencia y Acceso a la Información Pública). Uso estrictamente académico. Fecha de respaldo crudo: `2026-11-22`.
-- **Nota expresa de aprobación docente:** El docente Angel Agüero Correa validó en clase trabajar con microdatos de SUNAT bajo el requisito de superar **2,000,000 de registros**; se envió el correo formal solicitando aprobación escrita de *Importación Definitiva (`ma`)* y del espejo en GitHub, quedando pendiente dicha confirmación escrita formal.
-
+- **Nota expresa de aprobación docente:** El docente Angel Agüero Correa validó en clase trabajar con microdatos de SUNAT bajo el requisito de superar **2,000,000 de registros**
 ---
 
 ## 2. Principales resultados verificados (ejecutados 100% en Google Colab, `SEED = 2026`)
